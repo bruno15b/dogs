@@ -12,14 +12,16 @@ function Login() {
 
   if (login === true) return <Navigate to="/conta" />;
   return (
-    <div className={styles.login}>
-      <Routes>
-        <Route path="/" element={<LoginForm />} />
-        <Route path="criar" element={<LoginCreate />} />
-        <Route path="resetar" element={<LoginPasswordReset />} />
-        <Route path="perdeu" element={<LoginPasswordLost />} />
-      </Routes>
-    </div>
+    <section className={styles.login}>
+      <div className={styles.forms}>
+        <Routes>
+          <Route path="/" element={<LoginForm />} />
+          <Route path="criar" element={<LoginCreate />} />
+          <Route path="resetar" element={<LoginPasswordReset />} />
+          <Route path="perdeu" element={<LoginPasswordLost />} />
+        </Routes>
+      </div>
+    </section>
   );
 }
 

@@ -46,7 +46,6 @@ export function UserStorage({ children }) {
     const json = await response.json();
     setData(json);
     setLogin(true);
-    console.log(json);
   }
 
   async function userLogin(username, password) {
@@ -55,7 +54,7 @@ export function UserStorage({ children }) {
       setLoading(true);
       const { url, options } = TOKEN_POST({ username, password });
       const tokenRes = await fetch(url, options);
-      if (!tokenRes.ok) throw new Error(`Error: Usuário inválido`);
+      if (!tokenRes.ok) throw new Error(`Error: usuário ou senha inválidos`);
       const { token } = await tokenRes.json();
       window.localStorage.setItem("token", token);
       getUser(token);
