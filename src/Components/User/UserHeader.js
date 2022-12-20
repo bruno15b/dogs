@@ -6,7 +6,6 @@ import { useLocation, useParams } from "react-router-dom";
 const UserHeader = () => {
   const [title, setTitle] = React.useState("");
   const location = useLocation();
-  console.log(location);
 
   React.useEffect(() => {
     if ("/conta/estatisticas" === location.pathname) {
