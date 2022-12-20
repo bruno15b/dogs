@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/dogs/static/css/main.0a0e9ce6.css",
-    "main.js": "/dogs/static/js/main.9587df33.js",
+    "main.css": "/dogs/static/css/main.28309169.css",
+    "main.js": "/dogs/static/js/main.4a44f10d.js",
     "static/media/login.jpg": "/dogs/static/media/login.07d71f5b9d5714e556b0.jpg",
+    "static/media/sair.svg": "/dogs/static/media/sair.a1917210ebb96c5029ada5135bdb8847.svg",
+    "static/media/feed.svg": "/dogs/static/media/feed.b8b13312eb97d7668cf865481902a8c3.svg",
     "index.html": "/dogs/index.html",
     "static/media/usuario.svg": "/dogs/static/media/usuario.6d65a298e2fba2e83683.svg",
     "static/media/dogs.svg": "/dogs/static/media/dogs.69bf6d229e8cb46f9023318d0802ee8f.svg",
-    "main.0a0e9ce6.css.map": "/dogs/static/css/main.0a0e9ce6.css.map",
-    "main.9587df33.js.map": "/dogs/static/js/main.9587df33.js.map"
+    "static/media/estatisticas.svg": "/dogs/static/media/estatisticas.c69dd1e16d1f351b25eb7f01658f7c8e.svg",
+    "static/media/adicionar.svg": "/dogs/static/media/adicionar.2fe277f9b2182f23c15f5afd7110067a.svg",
+    "main.28309169.css.map": "/dogs/static/css/main.28309169.css.map",
+    "main.4a44f10d.js.map": "/dogs/static/js/main.4a44f10d.js.map"
   },
   "entrypoints": [
-    "static/css/main.0a0e9ce6.css",
-    "static/js/main.9587df33.js"
+    "static/css/main.28309169.css",
+    "static/js/main.4a44f10d.js"
   ]
 }
