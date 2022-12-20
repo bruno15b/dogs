@@ -1,6 +1,6 @@
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter as Router, Route, Routes } from "react-router-dom";
 import "./App.css";
 import Home from "./Components/Home";
 import Login from "./Components/Login/Login";
@@ -11,7 +11,7 @@ import NaoEncontrada from "./Components/NaoEncontrada";
 
 function App() {
   return (
-    <BrowserRouter>
+    <Router>
       <UserStorage>
         <Header />
         <Routes>
@@ -29,7 +29,7 @@ function App() {
         </Routes>
         <Footer />
       </UserStorage>
-    </BrowserRouter>
+    </Router>
   );
 }
 
