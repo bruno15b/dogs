@@ -73,5 +73,5 @@ export function UserStorage({ children }) {
     }
   }
 
-  return <UserContext.Provider value={{ userLogin, data, login, userLogout, error, loading }}>{children}</UserContext.Provider>;
+  return <UserContext.Provider value={{ userLogin, data, login, userLogout, error, loading, navigate }}>{children}</UserContext.Provider>;
 }
