@@ -8,6 +8,7 @@ import User from "./Components/User/User";
 import { UserStorage } from "./UserContext";
 import ProtectedRoute from "./Components/Helper/ProtectedRoute";
 import NaoEncontrada from "./Components/NaoEncontrada";
+import React from "react";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <UserStorage>
         <Header />
         <Routes>
+          <Route path="" element={<Home />} />
           <Route path="dogs/" element={<Home />} />
           <Route path="dogs/login/*" element={<Login />} />
           <Route
