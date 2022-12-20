@@ -10,7 +10,7 @@ import useMedia from "../../Hooks/useMedia";
 
 function UserHeaderNav() {
   const { userLogout } = React.useContext(UserContext);
-  const mobile = useMedia("(max-width: 40rem");
+  const mobile = useMedia("(max-width: 600px");
   const [mobileMenu, setMobileMenu] = React.useState(false);
   const nav = React.useRef();
 
@@ -37,15 +37,15 @@ function UserHeaderNav() {
     <>
       {mobile && <button className={`${styles.mobileButton} ${mobileMenu && styles.mobileButtonActive}`} aria-label="menu" onClick={handleClick}></button>}
       <nav ref={nav} className={`${mobile ? styles.navMobile : styles.nav} ${mobileMenu && styles.navMobileActive}`}>
-        <NavLink to="/conta" end>
+        <NavLink to="" end>
           <MinhasFotos />
           {mobile && "Minhas Fotos"}
         </NavLink>
-        <NavLink to="/conta/estatisticas">
+        <NavLink to="estatisticas">
           <Estatisticas />
           {mobile && "Estatisticas"}
         </NavLink>
-        <NavLink to="/conta/postar">
+        <NavLink to="postar">
           <AdicionarFoto />
           {mobile && "Adicionar Foto"}
         </NavLink>

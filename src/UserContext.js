@@ -11,13 +11,17 @@ export function UserStorage({ children }) {
   const [error, setError] = React.useState(null);
   const navigate = useNavigate();
 
-  const userLogout = React.useCallback(function () {
-    setData(null);
-    setError(null);
-    setLoading(false);
-    setLogin(false);
-    window.localStorage.removeItem("token");
-  }, []);
+  const userLogout = React.useCallback(
+    function () {
+      setData(null);
+      setError(null);
+      setLoading(false);
+      setLogin(false);
+      window.localStorage.removeItem("token");
+      navigate("dogs");
+    },
+    [navigate]
+  );
 
   React.useEffect(() => {
     async function autoLogin() {
@@ -60,7 +64,7 @@ export function UserStorage({ children }) {
       const { token } = await tokenRes.json();
       window.localStorage.setItem("token", token);
       getUser(token);
-      navigate("/conta");
+      navigate("dogs");
     } catch (err) {
       setError(err.message);
       setLogin(false);

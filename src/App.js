@@ -7,6 +7,7 @@ import Login from "./Components/Login/Login";
 import User from "./Components/User/User";
 import { UserStorage } from "./UserContext";
 import ProtectedRoute from "./Components/Helper/ProtectedRoute";
+import NaoEncontrada from "./Components/NaoEncontrada";
 
 function App() {
   return (
@@ -14,17 +15,17 @@ function App() {
       <UserStorage>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="login/*" element={<Login />} />
+          <Route path="dogs/" element={<Home />} />
+          <Route path="dogs/login/*" element={<Login />} />
           <Route
-            path="conta/*"
+            path="dogs/conta/*"
             element={
               <ProtectedRoute>
                 <User />
               </ProtectedRoute>
             }
           />
-          <Route path="login/*" element={<Login />} />
+          <Route path="*" element={<NaoEncontrada />} />
         </Routes>
         <Footer />
       </UserStorage>
