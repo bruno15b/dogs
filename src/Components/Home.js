@@ -4,7 +4,6 @@ import Feed from "./Feed/Feed";
 function Home() {
   return (
     <section className="container mainContainer">
-      Home
       <Feed />
     </section>
   );
