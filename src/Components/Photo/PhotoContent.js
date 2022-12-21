@@ -1,10 +1,10 @@
 import React from "react";
 import styles from "./PhotoContent.module.css";
 import { Link } from "react-router-dom";
-import { PHOTOS_GET } from "../../api";
 import PhotoComments from "./PhotoComments";
 
 function PhotoContent({ data }) {
+  console.log(data);
   const { photo, comments } = data;
   return (
     <div className={styles.photo}>
@@ -29,9 +29,7 @@ function PhotoContent({ data }) {
           </ul>
         </div>
       </div>
-      <div className={styles.comments}>
-        <PhotoComments id={photo.id} comments={comments} />
-      </div>
+      <PhotoComments id={photo.id} commentsFromServer={comments} />
     </div>
   );
 }
