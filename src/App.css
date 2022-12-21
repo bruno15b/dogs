@@ -74,6 +74,10 @@ button {
   margin: 0 auto;
 }
 
+.mainContainer {
+  margin: 4rem;
+}
+
 .animaLeft {
   opacity: 0;
   transform: translateX(-20px);
