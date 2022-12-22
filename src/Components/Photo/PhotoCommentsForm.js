@@ -5,7 +5,7 @@ import Error from "../Helper/Error";
 import { ReactComponent as Enviar } from "../../Assets/enviar.svg";
 import styles from "./PhotoCommentsForm.module.css";
 
-function PhotoCommentsForm({ id, setArrayComments }) {
+function PhotoCommentsForm({ id, setArrayComments, single }) {
   const { request, error } = useFetch();
   const [comment, setComment] = React.useState("");
   const token = window.localStorage.getItem("token");
@@ -20,7 +20,7 @@ function PhotoCommentsForm({ id, setArrayComments }) {
     }
   }
   return (
-    <form className={styles.form} onSubmit={handleSubmit}>
+    <form className={`${styles.form} ${single ? styles.single : ""}`} onSubmit={handleSubmit}>
       <textarea className={styles.textArea} name="comentario" id="comentario" value={comment} onChange={({ target }) => setComment(target.value)} />
       <button className={styles.button}>
         <Enviar />

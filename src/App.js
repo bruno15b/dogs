@@ -9,6 +9,7 @@ import { UserStorage } from "./UserContext";
 import ProtectedRoute from "./Components/Helper/ProtectedRoute";
 import NaoEncontrada from "./Components/NaoEncontrada";
 import React from "react";
+import Photo from "./Components/Photo/Photo";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
               </ProtectedRoute>
             }
           />
+          <Route path="foto/:id" element={<Photo />} />
           <Route path="*" element={<NaoEncontrada />} />
         </Routes>
         <Footer />

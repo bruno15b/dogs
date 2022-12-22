@@ -4,6 +4,11 @@
   align-items: stretch;
   margin: 1rem;
 }
+
+.single.form {
+  margin: 1rem 0.2rem;
+}
+
 .textArea {
   display: block;
   width: 100%;
@@ -16,6 +21,7 @@
   background: #eee;
   transition: 0.2s;
 }
+
 .textArea:focus,
 .textArea:hover {
   outline: none;

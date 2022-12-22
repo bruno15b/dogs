@@ -12,6 +12,11 @@
   animation: scaleUp 0.5s forwards;
 }
 
+.single.photo {
+  height: auto;
+  grid-template-columns: 1fr;
+}
+
 @keyframes scaleUp {
   to {
     opacity: initial;
@@ -19,8 +24,17 @@
   }
 }
 
+.img {
+  grid-row: 1/4;
+  align-self: center;
+}
+
 .details {
   padding: 2rem 2rem 0 2rem;
+}
+
+.single .details {
+  padding: 1rem 0 0 0;
 }
 
 .author {
@@ -77,5 +91,13 @@
   }
   .img {
     grid-row: 1;
+  }
+  .details {
+    padding: 1rem 1rem 0 1rem;
+  }
+
+  .attributes {
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
   }
 }

@@ -83,6 +83,12 @@ export function PHOTO_GET(id) {
   };
 }
 
+export function PHOTO_GET_FOR_NEW_PAGE(id) {
+  return {
+    url: API_URL + `/api/photo/${id}`,
+  };
+}
+
 export function COMMENT_POST(id, body, token) {
   return {
     url: API_URL + `/api/comment/${id}`,

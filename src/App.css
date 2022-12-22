@@ -11,7 +11,7 @@ body {
   --type-second: "Spectral", georgia;
   font-family: var(--type-first);
   padding-top: 4rem;
-  height: 101vh;
+  height: auto;
 }
 
 h1,
@@ -88,5 +88,17 @@ button {
   to {
     opacity: 1;
     transform: initial;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .title::after {
+    width: 0.9rem;
+    height: 0.9rem;
+    left: -1px;
   }
 }
