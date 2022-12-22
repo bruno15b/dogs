@@ -23,11 +23,6 @@
   padding: 2rem 2rem 0 2rem;
 }
 
-.img {
-  align-self: center;
-  grid-row: 1/4;
-}
-
 .author {
   opacity: 0.5;
   margin-bottom: 1rem;
