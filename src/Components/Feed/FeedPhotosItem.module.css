@@ -17,7 +17,7 @@
   overflow: hidden;
 }
 
-.photo img {
+.photo > div {
   border-radius: 0.2rem;
   align-self: center;
   grid-area: 1/1;
