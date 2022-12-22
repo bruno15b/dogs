@@ -28,7 +28,7 @@ function App() {
               </ProtectedRoute>
             }
           />
-          <Route path="foto/:id" element={<Photo />} />
+          <Route path="dogs/foto/:id" element={<Photo />} />
           <Route path="*" element={<NaoEncontrada />} />
         </Routes>
         <Footer />
