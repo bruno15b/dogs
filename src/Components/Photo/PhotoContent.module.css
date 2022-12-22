@@ -78,7 +78,7 @@
     max-height: calc(100vh - 7rem);
     overflow-y: auto;
     grid-template-columns: minmax(20rem, 40rem);
-    grid-template-rows: auto 1fr minmax(150px, auto) max-content;
+    grid-template-rows: auto 1fr minmax(50px, auto) max-content;
   }
   .img {
     grid-row: 1;
