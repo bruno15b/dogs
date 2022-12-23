@@ -1,0 +1,7 @@
+.photo div {
+  grid-template-rows: minmax(300px, 400px) min-content auto 1fr;
+}
+
+.photo img {
+  max-height: 100%;
+}

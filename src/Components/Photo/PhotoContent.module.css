@@ -30,7 +30,10 @@
 }
 
 .details {
+  background: white;
+  height: 200px;
   padding: 2rem 2rem 0 2rem;
+  display: block;
 }
 
 .single .details {
@@ -81,17 +84,19 @@
   margin-top: 5px;
 }
 
-@media (max-width: 64rem) {
+@media (max-width: 1024px) {
   .photo {
     height: auto;
-    max-height: calc(100vh - 7rem);
     overflow-y: auto;
+    max-height: calc(100vh - 7rem);
     grid-template-columns: minmax(20rem, 40rem);
-    grid-template-rows: auto 1fr minmax(60px, auto) max-content;
+    grid-template-rows: minmax(300px, object-fit) max-content auto max-content;
   }
+
   .img {
     grid-row: 1;
   }
+
   .details {
     padding: 1rem 1rem 0 1rem;
   }

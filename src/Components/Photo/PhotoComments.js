@@ -4,7 +4,6 @@ import PhotoCommentsForm from "./PhotoCommentsForm";
 import styles from "./PhotoComments.module.css";
 
 function PhotoComments({ id, commentsFromServer, single }) {
-  console.log(single);
   const [arrayComments, setArrayComments] = React.useState(commentsFromServer);
   const { login } = React.useContext(UserContext);
   const commentsSection = React.useRef(null);
