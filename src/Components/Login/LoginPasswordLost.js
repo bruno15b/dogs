@@ -1,5 +1,4 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
 import { PASSWORD_LOST } from "../../api";
 import useFetch from "../../Hooks/useFetch";
 import useForm from "../../Hooks/useForm";
@@ -9,8 +8,6 @@ import Error from "../Helper/Error";
 import styles from "./LoginPasswordLost.module.css";
 
 function LoginPasswordLost() {
-  const location = useLocation();
-
   const login = useForm();
   const { data, loading, error, request } = useFetch();
 
@@ -21,7 +18,6 @@ function LoginPasswordLost() {
       request(url, options);
     }
   }
-  console.log(location);
   return (
     <section className={styles.pass}>
       <h1 className="title">Perdeu a senha?</h1>

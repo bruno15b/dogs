@@ -29,6 +29,7 @@ function UserHeaderNav() {
   }
 
   const { pathname } = useLocation();
+
   React.useEffect(() => {
     setMobileMenu(false);
   }, [pathname]);
