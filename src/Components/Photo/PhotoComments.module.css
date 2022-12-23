@@ -1,9 +1,11 @@
 .comments {
   overflow-y: auto;
   word-break: break-word;
-  padding: 0 2rem;
+  padding: 1rem 2rem;
   min-height: 80px;
-  max-height: 150px;
+  max-height: 300px;
+  align-self: flex-end;
+  margin-bottom: 10px;
 }
 
 .comments li {
@@ -13,4 +15,11 @@
 
 .single.comments {
   padding: 0;
+}
+
+@media (max-width: 1024px) {
+  .comments {
+    max-height: 100px;
+    align-self: flex-end;
+  }
 }

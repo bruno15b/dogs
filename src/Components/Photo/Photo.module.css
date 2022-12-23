@@ -1,5 +1,7 @@
 .photo div {
-  grid-template-rows: minmax(300px, 400px) min-content auto 1fr;
+  grid-template-rows: max-content min-content auto 1fr;
+  overflow: initial;
+  max-height: 100%;
 }
 
 .photo img {

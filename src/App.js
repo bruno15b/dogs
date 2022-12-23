@@ -10,30 +10,36 @@ import ProtectedRoute from "./Components/Helper/ProtectedRoute";
 import NaoEncontrada from "./Components/NaoEncontrada";
 import React from "react";
 import Photo from "./Components/Photo/Photo";
+import UserProfile from "./Components/User/UserProfile";
 
 function App() {
   return (
-    <Router>
-      <UserStorage>
-        <Header />
-        <Routes>
-          <Route path="" element={<Home />} />
-          <Route path="dogs/" element={<Home />} />
-          <Route path="dogs/login/*" element={<Login />} />
-          <Route
-            path="dogs/conta/*"
-            element={
-              <ProtectedRoute>
-                <User />
-              </ProtectedRoute>
-            }
-          />
-          <Route path="dogs/foto/:id" element={<Photo />} />
-          <Route path="*" element={<NaoEncontrada />} />
-        </Routes>
-        <Footer />
-      </UserStorage>
-    </Router>
+    <div className="App">
+      <Router>
+        <UserStorage>
+          <Header />
+          <main className="AppBody">
+            <Routes>
+              <Route path="" element={<Home />} />
+              <Route path="dogs/" element={<Home />} />
+              <Route path="dogs/login/*" element={<Login />} />
+              <Route
+                path="dogs/conta/*"
+                element={
+                  <ProtectedRoute>
+                    <User />
+                  </ProtectedRoute>
+                }
+              />
+              <Route path="dogs/foto/:id" element={<Photo />} />
+              <Route path="perfil/:user" element={<UserProfile />} />
+              <Route path="*" element={<NaoEncontrada />} />
+            </Routes>
+          </main>
+          <Footer />
+        </UserStorage>
+      </Router>
+    </div>
   );
 }
 
