@@ -6,6 +6,7 @@ import Error from "../Helper/Error";
 import Loading from "../Helper/Loading";
 import PhotoContent from "./PhotoContent";
 import styles from "./Photo.module.css";
+import Head from "../Helper/Head";
 
 function Photo() {
   const { id } = useParams();
@@ -16,11 +17,13 @@ function Photo() {
     request(url);
   }, [request, id]);
 
+  console.log(data);
   if (error) return <Error error={error} />;
   if (loading) return <Loading />;
   if (data)
     return (
       <section className={`${styles.photo} container mainContainer`}>
+        <Head title={data.photo.title} />
         <PhotoContent data={data} single={true} />
       </section>
     );
