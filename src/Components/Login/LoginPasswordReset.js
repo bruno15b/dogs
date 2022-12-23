@@ -40,7 +40,7 @@ function LoginPasswordReset() {
     }
   }
   return (
-    <section>
+    <section className="animaLeft">
       <Head title="Resetar Senha" />
       <h1 className="title">Reset a senha</h1>
       <form onSubmit={handleSubmit}>
