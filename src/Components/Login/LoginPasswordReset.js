@@ -1,12 +1,12 @@
 import React from "react";
 import Input from "../Forms/Input";
-import styles from "./LoginPasswordReset.module.css";
 import useFetch from "../../Hooks/useFetch";
 import Button from "../Forms/Button";
 import useForm from "../../Hooks/useForm";
 import { PASSWORD_RESET } from "../../api";
 import Error from "../Helper/Error";
 import { useLocation, useNavigate } from "react-router-dom";
+import Head from "../Helper/Head";
 
 function LoginPasswordReset() {
   const [login, setLogin] = React.useState("");
@@ -40,7 +40,8 @@ function LoginPasswordReset() {
     }
   }
   return (
-    <div className={styles.pass}>
+    <section>
+      <Head title="Resetar Senha" />
       <h1 className="title">Reset a senha</h1>
       <form onSubmit={handleSubmit}>
         <Input label="Nova Senha" type="password" name="password" {...password} />
@@ -49,7 +50,7 @@ function LoginPasswordReset() {
         <Error error={diferent} />
         <Error error={error} />
       </form>
-    </div>
+    </section>
   );
 }
 

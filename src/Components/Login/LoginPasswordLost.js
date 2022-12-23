@@ -5,7 +5,7 @@ import useForm from "../../Hooks/useForm";
 import Button from "../Forms/Button";
 import Input from "../Forms/Input";
 import Error from "../Helper/Error";
-import styles from "./LoginPasswordLost.module.css";
+import Head from "../Helper/Head";
 
 function LoginPasswordLost() {
   const login = useForm();
@@ -19,7 +19,8 @@ function LoginPasswordLost() {
     }
   }
   return (
-    <section className={styles.pass}>
+    <section>
+      <Head title="Recuperar Senha" />
       <h1 className="title">Perdeu a senha?</h1>
       {data ? (
         <p style={{ color: "green" }}> {data}</p>

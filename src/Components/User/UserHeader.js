@@ -2,6 +2,7 @@ import React from "react";
 import UserHeaderNav from "./UserHeaderNav";
 import styles from "./UserHeader.module.css";
 import { useLocation } from "react-router-dom";
+import Head from "../Helper/Head";
 
 const UserHeader = () => {
   const [title, setTitle] = React.useState("");
@@ -17,6 +18,7 @@ const UserHeader = () => {
   }, [location]);
   return (
     <header className={styles.header}>
+      <Head title={title} />
       <h1 className="title">{title}</h1>
       <UserHeaderNav />
     </header>
