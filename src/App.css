@@ -11,7 +11,17 @@ body {
   --type-second: "Spectral", georgia;
   font-family: var(--type-first);
   padding-top: 4rem;
-  height: 101vh;
+  height: 100vh;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: calc(100vh + 150px);
+}
+
+.AppBody {
+  flex: 1;
 }
 
 h1,

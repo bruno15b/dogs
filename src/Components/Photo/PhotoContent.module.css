@@ -30,8 +30,6 @@
 }
 
 .details {
-  background: white;
-  height: 200px;
   padding: 2rem 2rem 0 2rem;
   display: block;
 }
@@ -88,9 +86,9 @@
   .photo {
     height: auto;
     overflow-y: auto;
-    max-height: calc(100vh - 7rem);
-    grid-template-columns: minmax(20rem, 40rem);
-    grid-template-rows: minmax(300px, object-fit) max-content auto max-content;
+    max-height: 80vh;
+    grid-template-columns: minmax(auto, 40rem);
+    grid-template-rows: 1fr max-content auto max-content;
   }
 
   .img {
